@@ -5,7 +5,7 @@ import {IconProps} from '../types';
 const BaseIcon = ({icon, className, outline, size}: IconProps) => {
   const SingleIcon = outline ? HeroIconsOutline[icon] : HeroIcons[icon];
 
-  return <SingleIcon className={className} size={size} />;
+  return <SingleIcon className={className} size={size} color={'white'} />;
 };
 
 export default BaseIcon;

@@ -9,4 +9,5 @@ export type AppStackParamList = {
  */
 export enum AppStackScreens {
   HOME = 'Home',
+  MENU = 'Menu',
 }

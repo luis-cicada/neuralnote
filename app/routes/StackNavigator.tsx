@@ -1,7 +1,9 @@
 import {createStackNavigator} from '@react-navigation/stack';
+import {View, useColorScheme} from 'react-native';
+import BaseTouchableWithIcon from '../components/base/BaseTouchableWithIcon';
 import Home from '../screens/home/Home';
 import {AppStackParamList, AppStackScreens} from './types';
-import {useColorScheme} from 'react-native';
+import Menu from '../screens/menu/Menu';
 
 const Stack = createStackNavigator<AppStackParamList>();
 
@@ -18,8 +20,30 @@ const StackNavigator: React.FC<AppStackParamList> = () => {
       <Stack.Screen
         name={AppStackScreens.HOME}
         component={Home}
+        options={({navigation}) => ({
+          headerTitle: 'Neural - Notes',
+          headerStyle: {
+            backgroundColor: backgroundColor,
+          },
+          headerTitleStyle: {color: textColor, fontWeight: '700'},
+          headerRight: () => {
+            return (
+              <View className="flex flex-1 px-6 justify-center">
+                <BaseTouchableWithIcon
+                  icon="Cog6ToothIcon"
+                  onPress={() => navigation.navigate(AppStackScreens.MENU)}
+                  size={26}
+                />
+              </View>
+            );
+          },
+        })}
+      />
+      <Stack.Screen
+        name={AppStackScreens.MENU}
+        component={Menu}
         options={{
-          headerTitle: 'Voice Notes',
+          headerTitle: 'Menu',
           headerStyle: {
             backgroundColor: backgroundColor,
           },
