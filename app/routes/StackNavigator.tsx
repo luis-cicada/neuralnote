@@ -30,7 +30,7 @@ const StackNavigator: React.FC<AppStackParamList> = () => {
             return (
               <View className="flex flex-1 px-6 justify-center">
                 <BaseTouchableWithIcon
-                  icon="Cog6ToothIcon"
+                  icon="Cog8ToothIcon"
                   onPress={() => navigation.navigate(AppStackScreens.MENU)}
                   size={26}
                 />

@@ -8,7 +8,7 @@ const HomeFooter = ({onPress}: IHomeFooterProps) => {
       <View className="bg-white flex size-14 rounded-full justify-center items-center">
         <TouchableOpacity
           activeOpacity={0.8}
-          className="bg-red-700 flex justify-center items-center rounded-full size-12"
+          className="bg-red-600 flex justify-center items-center rounded-full size-12 dark:bg-gray-700"
           onPress={onPress}>
           <BaseIcon icon="MicrophoneIcon" size={28} outline />
         </TouchableOpacity>

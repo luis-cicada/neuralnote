@@ -66,7 +66,7 @@ const recordingList = [
 
 const HomeRecordings = () => {
   return (
-    <SafeAreaView className="bg-green-600 w-full h-full flex flex-1 dark:bg-slate-900">
+    <SafeAreaView className="bg-green-600 w-full h-full flex flex-1 dark:bg-gray-900">
       <FlatList
         data={recordingList}
         renderItem={({item}) => (
