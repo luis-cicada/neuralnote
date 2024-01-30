@@ -1,10 +1,19 @@
-import {TouchableOpacity} from 'react-native';
-import BaseIcon from '../partials/icons/BaseIcon';
-import {IBaseTouchableWithIcon} from './types';
+import React from 'react'
+import { TouchableOpacity } from 'react-native'
+import BaseIcon from '../partials/icons/BaseIcon'
+import { IBaseTouchableWithIcon } from './types'
 
 const BaseTouchableWithIcon = (props: IBaseTouchableWithIcon) => {
-  const {onPress, icon, iconStyle, className, disabled, testID, outline, size} =
-    props;
+  const {
+    onPress,
+    icon,
+    iconStyle,
+    className,
+    disabled,
+    testID,
+    outline,
+    size,
+  } = props
   return (
     <TouchableOpacity
       activeOpacity={0.6}
@@ -19,7 +28,7 @@ const BaseTouchableWithIcon = (props: IBaseTouchableWithIcon) => {
         size={size}
       />
     </TouchableOpacity>
-  );
-};
+  )
+}
 
-export default BaseTouchableWithIcon;
+export default BaseTouchableWithIcon

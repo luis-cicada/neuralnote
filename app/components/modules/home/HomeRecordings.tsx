@@ -1,3 +1,4 @@
+import React from 'react'
 import { FlatList, SafeAreaView, Text, View } from 'react-native'
 import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon'
 

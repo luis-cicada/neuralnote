@@ -1,4 +1,5 @@
 import { MotiView } from 'moti'
+import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { Easing } from 'react-native-reanimated'
 import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon'
@@ -7,11 +8,11 @@ import { IRecordingFooterProps } from './types'
 const _color = '#7B0000'
 const _size = 15
 
-const RecordingFooter = ({ progress }: IRecordingFooterProps) => {
+const RecordingFooter = (_: IRecordingFooterProps) => {
   return (
     <View className="bg-gray-900 flex flex-col w-full h-44 justify-center items-center px-12 gap-y-8">
       <View className="flex flex-row w-full justify-center items-center gap-x-2">
-        <View style={[styles.dot, styles.center, { marginHorizontal: 12 }]}>
+        <View style={[styles.dot, styles.center, styles.margin]}>
           {[...Array(2).keys()].map(index => {
             return (
               <MotiView
@@ -71,5 +72,8 @@ const styles = StyleSheet.create({
   center: {
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  margin: {
+    marginHorizontal: 12,
   },
 })

@@ -1,3 +1,4 @@
+import React from 'react'
 import { SafeAreaView, StatusBar, View, useColorScheme } from 'react-native'
 import StackNavigator from '../../routes/StackNavigator'
 

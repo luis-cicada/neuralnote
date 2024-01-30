@@ -1,3 +1,4 @@
+import React from 'react'
 import { Text, View } from 'react-native'
 import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon'
 import { IHomeHeaderProps } from './types'

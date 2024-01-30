@@ -1,9 +1,9 @@
-import {ViewStyle} from 'react-native';
+import { ViewStyle } from 'react-native'
 
 /**
  * @type {Array<[React.CSSProperties,Boolean]>}  array with two items, first one is the style to apply, and the second one a boolean condition
  */
-type ConditionalStyle = Array<[React.CSSProperties, Boolean]>;
+type ConditionalStyle = Array<[React.CSSProperties, Boolean]>
 
 /**
  * @param args {Array<React.CSSProperties | ConditionalStyle>} Array of styles to merge
@@ -15,29 +15,29 @@ export const cx = (
   const mergedStyles = args.reduce(
     (result: Array<React.CSSProperties> = [], styles) => {
       if (!styles) {
-        return result;
+        return result
       }
 
       if (Array.isArray(styles)) {
         styles.map(item => {
           if (Array.isArray(item)) {
-            const [style, condition] = item;
+            const [style, condition] = item
             if (condition) {
-              result.push(style);
+              result.push(style)
             }
           } else {
             if (item != null) {
-              result.push(item);
+              result.push(item)
             }
           }
-        });
+        })
       } else {
-        result.push(styles);
+        result.push(styles)
       }
-      return result;
+      return result
     },
     [],
-  );
+  )
 
-  return Object.assign({}, ...mergedStyles);
-};
+  return Object.assign({}, ...mergedStyles)
+}

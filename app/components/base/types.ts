@@ -1,4 +1,4 @@
-import {IconProps} from '../partials/types';
+import { IconProps } from '../partials/types'
 /**
  * @interface IBaseTouchableWithIcon - Base Touchable With Icon
  *
@@ -10,9 +10,9 @@ import {IconProps} from '../partials/types';
  * @property {string} testID - Test ID
  */
 export interface IBaseTouchableWithIcon extends IconProps {
-  onPress: () => void;
-  iconStyle?: string;
-  className?: string;
-  disabled?: boolean;
-  testID?: string;
+  onPress: () => void
+  iconStyle?: string
+  className?: string
+  disabled?: boolean
+  testID?: string
 }
