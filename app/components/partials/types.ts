@@ -37,4 +37,5 @@ export interface IconProps {
   size: number;
   className?: string;
   outline?: boolean;
+  color?: string;
 }

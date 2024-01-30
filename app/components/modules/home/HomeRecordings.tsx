@@ -1,5 +1,5 @@
-import {FlatList, SafeAreaView, Text, View} from 'react-native';
-import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon';
+import { FlatList, SafeAreaView, Text, View } from 'react-native'
+import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon'
 
 const recordingList = [
   {
@@ -62,15 +62,15 @@ const recordingList = [
     date: '2021-09-18',
     duration: '00:00:00',
   },
-];
+]
 
 const HomeRecordings = () => {
   return (
     <SafeAreaView className="bg-green-600 w-full h-full flex flex-1 dark:bg-gray-900">
       <FlatList
         data={recordingList}
-        renderItem={({item}) => (
-          <View className="flex flex-row w-full justify-between items-center px-6 py-8 border-b-2 border-green-900 gap-x-8 dark:border-gray-400 dark:bg-slate-900">
+        renderItem={({ item }) => (
+          <View className="flex flex-row w-full justify-between items-center px-4 py-8 border-b-2 border-green-900 gap-x-8 dark:border-gray-400 dark:bg-slate-900">
             <View className="flex flex-1 flex-row justify-between items-center">
               <BaseTouchableWithIcon
                 icon="PlayIcon"
@@ -79,25 +79,23 @@ const HomeRecordings = () => {
                 outline
               />
               <Text className="text-white font-bold text-lg">{item.title}</Text>
-            </View>
-            <View className="flex flex-1 flex-row justify-between items-center">
               <Text className="text-white font-bold text-lg">{item.date}</Text>
               <Text className="text-white font-bold text-lg">
                 {item.duration}
               </Text>
+              <BaseTouchableWithIcon
+                icon="EllipsisHorizontalCircleIcon"
+                onPress={() => null}
+                size={28}
+                outline
+              />
             </View>
-            <BaseTouchableWithIcon
-              icon="EllipsisHorizontalCircleIcon"
-              onPress={() => null}
-              size={28}
-              outline
-            />
           </View>
         )}
         keyExtractor={item => item.id.toString()}
       />
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default HomeRecordings;
+export default HomeRecordings

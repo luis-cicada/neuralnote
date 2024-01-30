@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text } from 'react-native'
 
 const RecordingContent = () => {
   return (
@@ -8,7 +8,7 @@ const RecordingContent = () => {
         <Text className="text-white text-base font-light">Transcribing...</Text>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default RecordingContent;
+export default RecordingContent
