@@ -1,8 +1,9 @@
-import {Text, View} from 'react-native';
-import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon';
-import {IHomeHeaderProps} from './types';
+import React from 'react'
+import { Text, View } from 'react-native'
+import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon'
+import { IHomeHeaderProps } from './types'
 
-const HomeHeader = ({order, setOrder}: IHomeHeaderProps) => {
+const HomeHeader = ({ order, setOrder }: IHomeHeaderProps) => {
   return (
     <View className="bg-green-300 w-full h-14 border-b-2 border-green-900 dark:bg-slate-700 dark:border-gray-400">
       <View className="flex flex-1 flex-row w-full items-center justify-between px-4">
@@ -32,9 +33,9 @@ const HomeHeader = ({order, setOrder}: IHomeHeaderProps) => {
             icon={order === 'desc' ? 'ChevronDownIcon' : 'ChevronUpIcon'}
             onPress={() => {
               if (order === 'desc') {
-                setOrder('asc');
+                setOrder('asc')
               } else {
-                setOrder('desc');
+                setOrder('desc')
               }
             }}
             size={24}
@@ -42,7 +43,7 @@ const HomeHeader = ({order, setOrder}: IHomeHeaderProps) => {
         </View>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default HomeHeader;
+export default HomeHeader

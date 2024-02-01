@@ -1,25 +1,39 @@
-import {Text, View} from 'react-native';
-import * as Progress from 'react-native-progress';
-import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon';
-import {IRecordingFooterProps} from './types';
+import { MotiView } from 'moti'
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import { Easing } from 'react-native-reanimated'
+import BaseTouchableWithIcon from '../../base/BaseTouchableWithIcon'
+import { IRecordingFooterProps } from './types'
 
-const RecordingFooter = ({progress}: IRecordingFooterProps) => {
+const _color = '#7B0000'
+const _size = 15
+
+const RecordingFooter = (_: IRecordingFooterProps) => {
   return (
-    <View className="bg-gray-900 flex flex-col w-full h-44 justify-center items-center px-12 gap-y-4">
+    <View className="bg-gray-900 flex flex-col w-full h-44 justify-center items-center px-12 gap-y-8">
       <View className="flex flex-row w-full justify-center items-center gap-x-2">
-        <View className="size-4 rounded-full bg-red-500" />
-        <Text className="text-white text-lg font-bold">Recording...</Text>
-      </View>
-      <View className="flex flex-row gap-x-6 items-center">
-        <Progress.Bar
-          progress={progress}
-          width={120}
-          height={10}
-          borderWidth={2}
-          style={{borderRadius: 20}}
-          animated
-        />
-        <Text className="text-white text-lg font-bold">00:00</Text>
+        <View style={[styles.dot, styles.center, styles.margin]}>
+          {[...Array(2).keys()].map(index => {
+            return (
+              <MotiView
+                key={index}
+                from={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 0, scale: 3 }}
+                transition={{
+                  type: 'timing',
+                  duration: 1000,
+                  easing: Easing.out(Easing.ease),
+                  delay: index * 400,
+                  repeatReverse: false,
+                  loop: true,
+                }}
+                style={[StyleSheet.absoluteFillObject, styles.dot]}
+              />
+            )
+          })}
+        </View>
+        <Text className="text-white text-base font-bold">Recording</Text>
+        <Text className="text-white text-base font-bold">00:00</Text>
       </View>
       <View className="flex flex-row w-full justify-center items-center gap-x-10">
         <BaseTouchableWithIcon
@@ -43,7 +57,23 @@ const RecordingFooter = ({progress}: IRecordingFooterProps) => {
         />
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default RecordingFooter;
+export default RecordingFooter
+
+const styles = StyleSheet.create({
+  dot: {
+    width: _size,
+    height: _size,
+    borderRadius: _size,
+    backgroundColor: _color,
+  },
+  center: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  margin: {
+    marginHorizontal: 12,
+  },
+})

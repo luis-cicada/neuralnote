@@ -1,7 +1,7 @@
-import React from 'react';
-import {useColorScheme} from 'react-native';
-import RBSheet from 'react-native-raw-bottom-sheet';
-import {IBottomSheet} from '../types';
+import React from 'react'
+import { useColorScheme } from 'react-native'
+import RBSheet from 'react-native-raw-bottom-sheet'
+import { IBottomSheet } from '../types'
 
 /**
  * Renders a bottom sheet base component
@@ -14,10 +14,10 @@ import {IBottomSheet} from '../types';
  *
  * @returns   {JSX.Element}
  */
-const BottomSheet = ({refRBSheet, children}: IBottomSheet) => {
-  const isDarkMode = useColorScheme() === 'dark';
+const BottomSheet = ({ refRBSheet, children }: IBottomSheet) => {
+  const isDarkMode = useColorScheme() === 'dark'
 
-  const backgroundColor = isDarkMode ? '#0f172a' : '#fff';
+  const backgroundColor = isDarkMode ? '#0f172a' : '#fff'
 
   return (
     <RBSheet
@@ -39,7 +39,7 @@ const BottomSheet = ({refRBSheet, children}: IBottomSheet) => {
       animationType="fade">
       {children}
     </RBSheet>
-  );
-};
+  )
+}
 
-export default BottomSheet;
+export default BottomSheet

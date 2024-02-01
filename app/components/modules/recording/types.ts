@@ -1,3 +1,3 @@
 export interface IRecordingFooterProps {
-  progress: number;
+  progress?: number
 }

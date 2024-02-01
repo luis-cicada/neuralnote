@@ -1,6 +1,6 @@
 export type AppStackParamList = {
-  [key: string]: React.FC | undefined;
-};
+  [key: string]: React.FC | undefined
+}
 
 /**
  * AppStackScreens

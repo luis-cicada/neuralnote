@@ -1113,13 +1113,13 @@ PODS:
     - React-jsi (= 0.73.2)
     - React-logger (= 0.73.2)
     - React-perflogger (= 0.73.2)
-  - RNAudioRecorderPlayer (3.6.5):
+  - RNAudioRecorderPlayer (3.6.6):
     - React-Core
-  - RNGestureHandler (2.14.0):
+  - RNGestureHandler (2.14.1):
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
-  - RNReanimated (3.6.1):
+  - RNReanimated (3.6.2):
     - glog
     - RCT-Folly (= 2022.05.16.00)
     - React-Core
@@ -1407,9 +1407,9 @@ SPEC CHECKSUMS:
   React-runtimescheduler: df8945a656356ff10f58f65a70820478bfcf33ad
   React-utils: f5bc61e7ea3325c0732ae2d755f4441940163b85
   ReactCommon: 45b5d4f784e869c44a6f5a8fad5b114ca8f78c53
-  RNAudioRecorderPlayer: ba0aca62cd47c6f878313fdadb0edb23ef9dbf90
-  RNGestureHandler: 61bfdfc05db9b79dd61f894dcd29d3dcc6db3c02
-  RNReanimated: 57f436e7aa3d277fbfed05e003230b43428157c0
+  RNAudioRecorderPlayer: f790fc1afb118552ae6285d60adde52ee6b5d9ef
+  RNGestureHandler: 25b969a1ffc806b9f9ad2e170d4a3b049c6af85e
+  RNReanimated: 5589be82dc26b3f94738eb7c6b1f942787532b25
   RNScreens: b582cb834dc4133307562e930e8fa914b8c04ef2
   RNSoundLevel: 95b8c5aebd045a63d740d1e8e2d04df13dd83e95
   RNSVG: ba3e7232f45e34b7b47e74472386cf4e1a676d0a
