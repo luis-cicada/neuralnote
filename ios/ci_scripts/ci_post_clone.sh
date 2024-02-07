@@ -1,4 +1,14 @@
-# !/bin/sh
+#!/bin/sh
 
-gem install cocoapods
+
+# Install Node.js using Homebrew.
+brew install node
+
+# Install CocoaPods using Homebrew.
+brew install cocoapods
+
+# Update CocoaPods to the latest version.
+brew upgrade cocoapods
+
+# Install dependencies you manage with CocoaPods.
 pod install
