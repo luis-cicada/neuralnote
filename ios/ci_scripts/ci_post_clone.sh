@@ -4,6 +4,9 @@
 # Install Node.js using Homebrew.
 brew install node
 
+# Install Yarn using Homebrew.
+brew install yarn
+
 # Install CocoaPods using Homebrew.
 brew install cocoapods
 
