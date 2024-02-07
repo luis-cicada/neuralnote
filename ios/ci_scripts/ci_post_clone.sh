@@ -10,5 +10,8 @@ brew install cocoapods
 # Update CocoaPods to the latest version.
 brew upgrade cocoapods
 
+# Install node modules.
+yarn
+
 # Install dependencies you manage with CocoaPods.
 pod install
