@@ -1,4 +1,4 @@
 # !/bin/sh
 
-sudo gem install cocoapods
+gem install cocoapods
 pod install
