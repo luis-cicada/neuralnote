@@ -67,11 +67,11 @@ const recordingList = [
 
 const HomeRecordings = () => {
   return (
-    <SafeAreaView className="bg-green-600 w-full h-full flex flex-1 dark:bg-gray-900">
+    <SafeAreaView className="bg-gray-900 w-full h-full flex flex-1">
       <FlatList
         data={recordingList}
         renderItem={({ item }) => (
-          <View className="flex flex-row w-full justify-between items-center px-4 py-8 border-b-2 border-green-900 gap-x-8 dark:border-gray-400 dark:bg-slate-900">
+          <View className="flex flex-row w-full justify-between items-center px-4 py-8 border-b gap-x-8 border-gray-400 bg-slate-900">
             <View className="flex flex-1 flex-row justify-between items-center">
               <BaseTouchableWithIcon
                 icon="PlayIcon"

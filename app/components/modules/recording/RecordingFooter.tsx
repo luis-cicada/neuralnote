@@ -8,7 +8,7 @@ import { IRecordingFooterProps } from './types'
 const _color = '#7B0000'
 const _size = 15
 
-const RecordingFooter = (_: IRecordingFooterProps) => {
+const RecordingFooter: React.FC<IRecordingFooterProps> = _ => {
   return (
     <View className="bg-gray-900 flex flex-col w-full h-44 justify-center items-center px-12 gap-y-8">
       <View className="flex flex-row w-full justify-center items-center gap-x-2">

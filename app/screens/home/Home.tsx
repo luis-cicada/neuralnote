@@ -5,7 +5,7 @@ import HomeRecordings from '../../components/modules/home/HomeRecordings'
 import RecordingPage from '../../components/modules/recording/RecordingPage'
 import BottomSheet from '../../components/partials/bottomSheet/BottomSheet'
 
-const Home = () => {
+const Home: React.FC = () => {
   const [order, setOrder] = React.useState<'asc' | 'desc'>('asc')
   const refRBSheet = React.useRef<any>()
 

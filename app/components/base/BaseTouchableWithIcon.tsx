@@ -3,17 +3,16 @@ import { TouchableOpacity } from 'react-native'
 import BaseIcon from '../partials/icons/BaseIcon'
 import { IBaseTouchableWithIcon } from './types'
 
-const BaseTouchableWithIcon = (props: IBaseTouchableWithIcon) => {
-  const {
-    onPress,
-    icon,
-    iconStyle,
-    className,
-    disabled,
-    testID,
-    outline,
-    size,
-  } = props
+const BaseTouchableWithIcon: React.FC<IBaseTouchableWithIcon> = ({
+  onPress,
+  icon,
+  iconStyle,
+  className,
+  disabled,
+  testID,
+  outline,
+  size,
+}) => {
   return (
     <TouchableOpacity
       activeOpacity={0.6}
