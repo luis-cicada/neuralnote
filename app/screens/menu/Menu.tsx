@@ -1,10 +1,13 @@
 import React from 'react'
-import { SafeAreaView, Text } from 'react-native'
+import { SafeAreaView } from 'react-native'
+import MenuContent from '../../components/modules/menu/MenuContent'
+import MenuFooter from '../../components/modules/menu/MenuFooter'
 
-const Menu = () => {
+const Menu: React.FC = () => {
   return (
-    <SafeAreaView className="bg-green-300 flex flex-1 dark:bg-gray-900 dark:text-white">
-      <Text className="text-white">Menu</Text>
+    <SafeAreaView className="bg-gray-900 flex flex-1 text-white">
+      <MenuContent />
+      <MenuFooter />
     </SafeAreaView>
   )
 }

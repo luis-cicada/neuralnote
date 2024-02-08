@@ -1,4 +1,7 @@
-import { createStackNavigator } from '@react-navigation/stack'
+import {
+  TransitionPresets,
+  createStackNavigator,
+} from '@react-navigation/stack'
 import React from 'react'
 import { View, useColorScheme } from 'react-native'
 import BaseTouchableWithIcon from '../components/base/BaseTouchableWithIcon'
@@ -8,7 +11,7 @@ import { AppStackParamList, AppStackScreens } from './types'
 
 const Stack = createStackNavigator<AppStackParamList>()
 
-const backNavigation: React.FC = (navigation: any) => {
+const menuNavigation: React.FC = (navigation: any) => {
   return (
     <View className="flex flex-1 px-6 justify-center">
       <BaseTouchableWithIcon
@@ -23,8 +26,8 @@ const backNavigation: React.FC = (navigation: any) => {
 const StackNavigator: React.FC<AppStackParamList> = () => {
   const isDarkMode = useColorScheme() === 'dark'
 
-  const backgroundColor = isDarkMode ? '#0f172a' : '#fff'
-  const textColor = isDarkMode ? '#fff' : '#000'
+  const backgroundColor = '#0f172a'
+  const textColor = '#fff'
 
   return (
     <Stack.Navigator
@@ -34,12 +37,12 @@ const StackNavigator: React.FC<AppStackParamList> = () => {
         name={AppStackScreens.HOME}
         component={Home}
         options={({ navigation }) => ({
-          headerTitle: 'Neural - Notes',
+          headerTitle: 'Neural Notes',
           headerStyle: {
             backgroundColor: backgroundColor,
           },
           headerTitleStyle: { color: textColor, fontWeight: '700' },
-          headerRight: () => backNavigation(navigation),
+          headerRight: () => menuNavigation(navigation),
         })}
       />
       <Stack.Screen
@@ -51,6 +54,8 @@ const StackNavigator: React.FC<AppStackParamList> = () => {
             backgroundColor: backgroundColor,
           },
           headerTitleStyle: { color: textColor, fontWeight: '700' },
+          headerBackTitleVisible: false,
+          ...TransitionPresets.ModalSlideFromBottomIOS,
         }}
       />
     </Stack.Navigator>

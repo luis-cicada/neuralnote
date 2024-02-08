@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-const RecordingContent = () => {
+const RecordingContent: React.FC = () => {
   return (
     <View className="flex flex-1 px-4 py-8">
       <Text className="text-white text-xl font-bold">Recording 1</Text>
